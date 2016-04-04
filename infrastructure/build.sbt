@@ -1,6 +1,7 @@
 import sbt._
 
 lazy val infrastructureSettings = Seq(
+  name := "pizzza.infrastructure",
   version := "1.0",
   scalaVersion := "2.11.8"
 )

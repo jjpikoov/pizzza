@@ -1,6 +1,7 @@
 import sbt._
 
 lazy val domainSettings = Seq(
+  name := "pizzza.domain",
   version := "1.0",
   scalaVersion := "2.11.8"
 )
