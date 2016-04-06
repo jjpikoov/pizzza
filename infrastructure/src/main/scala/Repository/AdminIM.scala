@@ -1,12 +1,12 @@
 package main.scala.Repository
-import pizzza.domain.admin.repository.AdminRepository
+import pizzza.domain.admin.repository.IAdminRepository
 import pizzza.domain.admin.Admin
 
 
 /**
   * Created by jjpikoov on 3/30/16.
   */
-class AdminIM extends AdminRepository {
+class AdminIM extends IAdminRepository {
   var _admins: List[Admin] = Nil
 
   def AdminIM = {

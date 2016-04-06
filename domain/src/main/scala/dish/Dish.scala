@@ -19,6 +19,6 @@ class Dish(){
   def name_=(name : String) : Unit = _name = name
   def isAvaiable_=(isAvaiable : Boolean) : Unit = _isAvaiable = isAvaiable
   def cost_=(cost : Int) : Unit = _cost = cost
-  def total_=(totalWeight : Int ) : Unit = _totalWeight = totalWeight
+  def totalWeight_=(totalWeight : Int ) : Unit = _totalWeight = totalWeight
   def ingredients_=(ingredients : List[Ingredient]) = _ingredients = ingredients
 }
