@@ -4,6 +4,7 @@ import sbt._
 resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
 
 libraryDependencies += "org.scalactic" %% "scalactic" % "2.2.6"
+
 libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
 
 lazy val applicationSettings = Seq(

@@ -8,12 +8,13 @@ import pizzza.domain.dish.repository.IDishRepository
   */
 class DishService extends IDishService{
 
-  private var _dishRepository: IDishRepository = _
+  private var _dishRepository : IDishRepository = new DishIM()
+  def DishService() = {
+    _dishRepository = new DishIM()
+  }
+  def DishService(repository : IDishRepository) = {_dishRepository = repository}
 
-  def DishService = _dishRepository = new DishIM
-  def DishService(repository : IDishRepository) = _dishRepository = repository
-
-  override def getAllDishes: List[Dish] = _dishRepository.findAll
+  override def getAllDishes() : List[Dish] = _dishRepository.findAll()
   override def removeDish(d: Dish): Boolean = {
     val x = _dishRepository.delete(d.id)
     x match {

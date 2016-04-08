@@ -7,10 +7,9 @@ import pizzza.domain.dish.{Dish, Ingredient}
   * Created by jjpikoov on 4/4/16.
   */
 class DishIM extends IDishRepository{
-  var _dishes: List[Dish] = Nil
+  var _dishes : List[Dish] = List[Dish]()
 
-  def DishIM = {
-
+  def DishIM() = {
     val d1 = new Dish
     d1.id = 1
     d1.name = "d1"
@@ -21,6 +20,9 @@ class DishIM extends IDishRepository{
     i1.id = 1
     i1.name = "i1"
     d1.ingredients :+ i1
+
+    _dishes = _dishes :+ d1
+
 
     val d2 = new Dish
     d2.id = 2
@@ -33,11 +35,14 @@ class DishIM extends IDishRepository{
     i2.name = "i1"
     d2.ingredients :+ i1
     d2.ingredients :+ i2
+
+    _dishes = _dishes :+ d2
+
   }
 
   override def insert(x: Dish): Unit = _dishes :+ x
 
-  override def findAll: List[Dish] = _dishes
+  override def findAll() : List[Dish] = _dishes
 
   override def delete(id: Int): Option[Dish] = {
     var res: Option[Dish] = None
